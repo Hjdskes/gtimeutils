@@ -1,0 +1,12 @@
+[Desktop Entry]
+_Name=GTimer
+_Comment=A simple countdown timer
+TryExec=gtimer
+Exec=gtimer
+Icon=clocks
+StartupNotify=true
+Terminal=false
+Type=Application
+Categories=GNOME;GTK;Utilities;
+# Extra keywords that can be used to search for GTimer in GNOME Shell and Unity
+_Keywords=Timer;Countdown;Clock;

@@ -1,0 +1,12 @@
+[Desktop Entry]
+_Name=GStopwatch
+_Comment=Start, pause and stop the stopwatch with the ability to save laps.
+TryExec=gstopwatch
+Exec=gstopwatch
+Icon=clocks
+StartupNotify=true
+Terminal=false
+Type=Application
+Categories=GNOME;GTK;Utilities;
+# Extra keywords that can be used to search for GStopwatch in GNOME Shell and Unity
+_Keywords=Laps;Time;Stopwatch;

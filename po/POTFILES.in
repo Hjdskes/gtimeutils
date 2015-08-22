@@ -1,0 +1,4 @@
+# List of source files containing translatable strings.
+# Please keep this list sorted alphabetically.
+data/gstopwatch.desktop.in.in
+data/gtimer.desktop.in.in
