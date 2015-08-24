@@ -4,17 +4,22 @@ bin_PROGRAMS = \
 	gtimer
 
 gtimer_SOURCES = \
-	main.c \
+	../../data/gtimeutils-resources.c \
+	../radius.c \
 	gtimer-application.c \
-	gtimer-window.c
+	gtimer-face.c \
+	gtimer-radius.c \
+	gtimer-window.c \
+	main.c
 
 gtimer_CFLAGS = \
 	-DLOCALE_DIR=\"$(localedir)\" \
-	$(GTK3_CFLAGS) \
+	$(GTIMER_CFLAGS) \
 	$(AM_CFLAGS)
 
 gtimer_LDADD = \
-	$(GTK3_LIBS)
+	$(GTIMER_LIBS) \
+	-lm
 
 gtimer_LDFLAGS = \
 	-export-dynamic -no-undefined

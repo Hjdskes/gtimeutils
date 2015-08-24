@@ -3,26 +3,18 @@ GTimeUtils
 
 **A collection of simple, small time utilities.**
 
-Usage
------
-
-### GTimer
-
-GTimer can take four (five if you count `--help`) command line arguments:
-
-	-s, --seconds     Specify seconds to count down from
-	-m, --minutes     Specify minutes to count down from
-	-u, --hours       Specify hours to count down from
-	-t, --text        Set an alternative notification text
-	-r, --run         Immediately start the countdown
+From version 2.0 onwards, both GTimer and GStopwatch are copies from GNOME Clocks' respective stack
+pages. Prior to version 2.0, both utilities served more as a practice than anything else. Since I
+like the modern look of GNOME Clocks, but dislike the fact that all its functionality is combined
+into one application I have re-purposed its ui files into standalone utilities.
 
 Installation
 ------------
 
-All utilities in GTimeUtils are written using GTK+ 3. For sending notifications, you need to have
-libcanberra and libnotify installed. To build, simply run these commands:
+All utilities in GTimeUtils are written using GTK+ 3. For playing sound with notifications, you
+need to have `gsound` installed. To build, simply run these commands:
 
-	$ ./autogen
+	$ ./autogen.sh
 	$ make
 	# make clean install
 

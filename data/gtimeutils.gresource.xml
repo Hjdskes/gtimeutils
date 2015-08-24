@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gresources>
+  <gresource prefix="/org/unia/gtimeutils/">
+    <file>gnome-clocks.css</file>
+  </gresource>
+  <gresource prefix="/org/unia/gtimeutils/gtimer/">
+    <file preprocess="xml-stripblanks">timer.ui</file>
+  </gresource>
+</gresources>

@@ -20,12 +20,15 @@ AC_SUBST(GETTEXT_PACKAGE)
 AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE, "$GETTEXT_PACKAGE", [Gettext package.])
 
 # Package requirements
-PKG_CHECK_MODULES([GTK3], [gtk+-3.0 >= 3.12.0])
+PKG_CHECK_MODULES([GTIMER], [gtk+-3.0 >= 3.12.0 gsound])
+PKG_CHECK_MODULES([GSTOPWATCH], [gtk+-3.0])
+
+AC_PATH_PROG(GLIB_COMPILE_RESOURCES, glib-compile-resources)
 
 AC_CONFIG_FILES(Makefile
 		data/Makefile
-		data/gstopwatch.desktop.in
-		data/gtimer.desktop.in
+		data/org.unia.gtimeutils.gstopwatch.desktop.in
+		data/org.unia.gtimeutils.gtimer.desktop.in
 		src/Makefile
 		src/gstopwatch/Makefile
 		src/gtimer/Makefile
