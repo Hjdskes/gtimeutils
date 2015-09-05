@@ -6,4 +6,8 @@
   <gresource prefix="/org/unia/gtimeutils/gtimer/">
     <file preprocess="xml-stripblanks">timer.ui</file>
   </gresource>
+  <gresource prefix="/org/unia/gtimeutils/gstopwatch/">
+    <file preprocess="xml-stripblanks">stopwatch.ui</file>
+    <file preprocess="xml-stripblanks">laps-row.ui</file>
+  </gresource>
 </gresources>

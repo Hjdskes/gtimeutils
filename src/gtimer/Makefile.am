@@ -6,6 +6,7 @@ bin_PROGRAMS = \
 gtimer_SOURCES = \
 	../../data/gtimeutils-resources.c \
 	../radius.c \
+	../utils.c \
 	gtimer-application.c \
 	gtimer-face.c \
 	gtimer-radius.c \

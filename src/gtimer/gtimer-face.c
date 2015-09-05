@@ -31,6 +31,7 @@
 #include <gtk/gtk.h>
 #include <glib/gi18n.h>
 
+#include "../utils.h"
 #include "gtimer-face.h"
 #include "gtimer-radius.h"
 
@@ -90,16 +91,6 @@ static void gtimer_face_start (GTimerFace *gtimer_face);
 static void gtimer_face_pause (GTimerFace *gtimer_face);
 
 static void
-time_to_hms (int remaining, int *hours, int *minutes, int *seconds)
-{
-	*hours = remaining / 3600;
-	remaining = remaining % 3600;
-	*minutes = remaining / 60;
-	remaining = remaining % 60;
-	*seconds = remaining;
-}
-
-static void
 update_countdown_label (GTimerFace *gtimer_face, int hours, int minutes, int seconds)
 {
 	GTimerFacePrivate *priv;
@@ -122,10 +113,11 @@ update_countdown (GTimerFace *gtimer_face, double elapsed)
 		/* ceil () because we count backwards:
 		 * with 0.3 seconds we want to show 1 second remaining,
 		 * with 59.2 seconds we want to show 1 minute, etc. */
-		int remaining = (int) ceil (priv->span - elapsed);
+		double remaining = ceil (priv->span - elapsed);
+		double remainder;
 		int hours, minutes, seconds;
 
-		time_to_hms (remaining, &hours, &minutes, &seconds);
+		time_to_hms (remaining, &hours, &minutes, &seconds, &remainder);
 
 		update_countdown_label (gtimer_face, hours, minutes, seconds);
 		gtimer_radius_update (priv->countdown_frame, elapsed);

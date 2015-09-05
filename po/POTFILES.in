@@ -1,8 +1,15 @@
 # List of source files containing translatable strings.
 # Please keep this list sorted alphabetically.
+src/gstopwatch/gstopwatch-application.c
+src/gstopwatch/gstopwatch-face.c
+src/gstopwatch/gstopwatch-window.c
+src/gstopwatch/main.c
 src/gtimer/gtimer-application.c
 src/gtimer/gtimer-face.c
 src/gtimer/gtimer-window.c
 src/gtimer/main.c
+data/gstopwatch.ui
+data/laps-row.ui
+data/timer.ui
 data/org.unia.gtimeutils.gstopwatch.desktop.in.in
 data/org.unia.gtimeutils.gtimer.desktop.in.in
